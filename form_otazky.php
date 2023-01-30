@@ -19,12 +19,7 @@ require "login.php"
     {
         echo "Úspěšně vloženo.";
     }}
-    ?>
-    <?php
-    if (!($con = mysqli_connect($host,$user,$password,$database))){
-    die("Nelze se připojit k databázi. </body> </html>");
-    }
-    mysqli_query($con, "SET NAMES 'UTF8'");
+    
     if (!($vysledek = mysqli_query($con, "SELECT * FROM otazky"))){
     die ("Dotaz nelze provést.</body> </html>");
     }
