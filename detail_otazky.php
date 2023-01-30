@@ -12,7 +12,7 @@ require "login.php"
 <body>
 <?php
 if (isset($_GET['id'])){
-    $id = $_GET['id'];
+    $id = addslashes($_GET['id']);
     if (!($con = mysqli_connect($host,$user,$password,$database))) {
         die("Nelze se připojit k databázi. </body></html>");
     }   
